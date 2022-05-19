@@ -11,4 +11,5 @@ public class MarkDto {
     private Integer value;
     private Integer weight;
     private String description;
+    private MarkType type;
 }

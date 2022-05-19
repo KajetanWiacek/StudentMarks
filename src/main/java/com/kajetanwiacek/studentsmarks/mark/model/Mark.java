@@ -26,10 +26,13 @@ public class Mark {
 
     private String description;
 
-    public Mark(Long studentId, Integer value, Integer weight, String description) {
+    private MarkType type;
+
+    public Mark(Long studentId, Integer value, Integer weight, String description,MarkType type) {
         this.studentId = studentId;
         this.value = value;
         this.weight = weight;
         this.description = description;
+        this.type = type;
     }
 }

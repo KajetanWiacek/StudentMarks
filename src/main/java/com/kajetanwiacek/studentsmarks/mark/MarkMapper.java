@@ -17,6 +17,9 @@ public class MarkMapper {
         if(weight<1 || weight>7){
             throw new InvalidMarkWeightException(weight);
         }
-        return new Mark(studentId,markDto.getValue(), markDto.getWeight(), markDto.getDescription());
+        if(markDto.getType() == null){
+            throw new RuntimeException("Mark type not given");
+        }
+        return new Mark(studentId,markDto.getValue(), markDto.getWeight(), markDto.getDescription(),markDto.getType());
     }
 }
