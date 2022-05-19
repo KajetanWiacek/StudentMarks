@@ -12,8 +12,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleStudentNotFoundException(StudentNotFoundException ex){
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
+
     @ExceptionHandler(InvalidMarkValueException.class)
     public ResponseEntity<String> handleInvalidMarkValueException(InvalidMarkValueException ex){
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(InvalidMarkWeightException.class)
+    public ResponseEntity<String> handleInvalidMarkWeightException(InvalidMarkWeightException ex){
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }

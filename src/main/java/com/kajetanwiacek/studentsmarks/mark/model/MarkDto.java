@@ -9,5 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class MarkDto {
     private Integer value;
+    private Integer weight;
     private String description;
 }

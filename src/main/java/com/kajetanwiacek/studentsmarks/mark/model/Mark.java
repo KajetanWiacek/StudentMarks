@@ -22,11 +22,14 @@ public class Mark {
 
     private Integer value;
 
+    private Integer weight;
+
     private String description;
 
-    public Mark(Long studentId, Integer value, String description) {
+    public Mark(Long studentId, Integer value, Integer weight, String description) {
         this.studentId = studentId;
         this.value = value;
+        this.weight = weight;
         this.description = description;
     }
 }
